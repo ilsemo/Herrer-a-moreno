@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herrería Moreno</title>
+  <style>
+    /* Variables globales */
+    :root {
+      --color-principal: #222;
+      --color-secundario: #f4f4f4;
+      --color-acento: #d4a017;
+      --fuente-principal: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--fuente-principal);
+      background-color: var(--color-secundario);
+      color: var(--color-principal);
+      line-height: 1.6;
+    }
+
+    /* Estilos del encabezado */
+    header {
+      background-color: var(--color-principal);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .header-contenido {
+  display: flex;
+  align-items: center;
+justify-content: space-between;  
+max-width: 1100px;
+  margin: 0 auto;
+content: irem;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+  margin-left: 1rem; 
+}
+
+.texto-header {
+  text-align: left; 
+}
+ 
+    nav {
+    
+      margin-left: auto;
+    }
+
+    nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--color-acento);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--color-principal);
+}
+
+    /* Contenedor principal */
+    .contenedor {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .servicio {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .servicio:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .servicio img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Sección de contacto */
+    .contacto {
+      background-color: var(--color-principal);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      margin-bottom: 1rem;
+    }
+
+    .contacto p {
+      margin: 0.5rem 0;
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #111;
+      color: #ccc;
+    }
+
+    /* Responsividad */
+    @media (max-width: 600px) {
+      .header-contenido {
+        flex-direction: column;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <img src="logo.png" alt="Logo Herrería Moreno" class="logo-img">
+      <div class="texto-header">
+        <h1>Herrería Moreno</h1>
+        <p>Forjando calidad y confianza desde ...</p>
+      </div>
+  
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+  </header>
+  
+  <div class="contenedor" id="servicios">
+    <h2>Servicios</h2>
+    <div class="servicios">
+      <div class="servicio">
+        <img src="porton.jpg" alt="Portones de hierro">
+        <h3>Portones</h3>
+        <p>Diseño y fabricación de portones metálicos personalizados.</p>
+      </div>
+      <div class="servicio">
+        <img src="barandal.jpg" alt="Barandales de hierro forjado">
+        <h3>Barandales</h3>
+        <p>Elegantes barandales de hierro forjado.</p>
+      </div>
+      <div class="servicio">
+        <img src="puerta.jpg" alt="Estructuras metálicas">
+        <h3>Estructuras</h3>
+        <p>Fabricación e instalación de estructuras metálicas.</p>
+      </div>
+      <div class="servicio">
+        <img src="puerta.jpg" alt="Puertas metálicas">
+        <h3>Puertas</h3>
+        <p>Fabricación de puertas metálicas resistentes y seguras para interior y exterior.</p>
+      </div>
+      
+      <div class="servicio">
+        <img src="proteccion.jpg" alt="Protecciones para ventanas">
+        <h3>Protecciones</h3>
+        <p>Instalación de protecciones de herrería para ventanas y puertas, seguras y estéticas.</p>
+      </div>
+      
+      <div class="servicio">
+        <img src="escalera.jpg" alt="Escaleras metálicas">
+        <h3>Escaleras</h3>
+        <p>Diseño y construcción de escaleras metálicas para interiores y exteriores con acabados profesionales.</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <p><strong>Teléfono:</strong> 449 498 3841</p>
+    <p><strong>Email:</strong> herreria.est.moreno@gmail.com</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Herrería Moreno. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
