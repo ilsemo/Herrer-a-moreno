@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herrería Moreno</title>
+  <title>Herrería Moreno | Portones, Escaleras y Barandales en Aguascalientes</title>
+  <meta name="description" content="Herrería Moreno: especialistas en herrería artística y estructuras metálicas en Aguascalientes.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    /* Variables globales */
     :root {
       --color-principal: #222;
       --color-secundario: #f4f4f4;
@@ -26,51 +27,54 @@
       line-height: 1.6;
     }
 
-    /* Estilos del encabezado */
     header {
       background-color: var(--color-principal);
       color: white;
       padding: 2rem 1rem;
-      text-align: center;
     }
 
     .header-contenido {
-  display: flex;
-  align-items: center;
-justify-content: space-between;  
-max-width: 1100px;
-  margin: 0 auto;
-content: irem;
-}
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-.logo-img {
-  width: 100px;
-  height: auto;
-  margin-left: 1rem; 
-}
+    .logo-img {
+      width: 100px;
+      height: auto;
+      margin-left: 1rem;
+    }
 
-.texto-header {
-  text-align: left; 
-}
- 
+    .texto-header {
+      text-align: left;
+      flex-grow: 1;
+      padding-left: 1rem;
+    }
+
+    .texto-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
     nav {
-    
       margin-left: auto;
     }
 
     nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: var(--color-acento);
-  font-weight: bold;
-  transition: 0.3s;
-}
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--color-acento);
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-nav a:hover {
-  color: var(--color-principal);
-}
+    nav a:hover {
+      color: var(--color-secundario);
+    }
 
-    /* Contenedor principal */
     .contenedor {
       max-width: 1100px;
       margin: auto;
@@ -102,7 +106,10 @@ nav a:hover {
       border-radius: 10px;
     }
 
-    /* Sección de contacto */
+    .servicio h3 {
+      margin-top: 1rem;
+    }
+
     .contacto {
       background-color: var(--color-principal);
       color: white;
@@ -110,15 +117,34 @@ nav a:hover {
       text-align: center;
     }
 
-    .contacto h2 {
+    .contacto form {
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+
+    .contacto input,
+    .contacto textarea {
+      width: 100%;
+      padding: 0.75rem;
       margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
     }
 
-    .contacto p {
-      margin: 0.5rem 0;
+    .contacto button {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--color-acento);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    /* Pie de página */
+    .contacto button:hover {
+      background-color: #b68e14;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -127,12 +153,7 @@ nav a:hover {
       color: #ccc;
     }
 
-    /* Responsividad */
     @media (max-width: 600px) {
-      .header-contenido {
-        flex-direction: column;
-      }
-
       nav a {
         display: block;
         margin: 0.5rem 0;
@@ -141,71 +162,75 @@ nav a:hover {
   </style>
 </head>
 <body>
-
   <header>
     <div class="header-contenido">
-      <img src="logo.png" alt="Logo Herrería Moreno" class="logo-img">
+      <img src="logo.png" alt="Logotipo de Herrería Moreno" class="logo-img">
       <div class="texto-header">
         <h1>Herrería Moreno</h1>
-        <p>Forjando calidad y confianza desde ...</p>
+        <p>Forjando calidad y confianza desde hace más de 20 años</p>
       </div>
-  
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
-  
-  <div class="contenedor" id="servicios">
+
+  <main class="contenedor" id="servicios">
     <h2>Servicios</h2>
     <div class="servicios">
       <div class="servicio">
-        <img src="porton.jpg" alt="Portones de hierro">
+        <img src="porton.jpg" alt="Portón metálico personalizado">
         <h3>Portones</h3>
         <p>Diseño y fabricación de portones metálicos personalizados.</p>
       </div>
       <div class="servicio">
-        <img src="barandal.jpg" alt="Barandales de hierro forjado">
+        <img src="barandal.jpg" alt="Barandal de hierro forjado negro con diseño clásico">
         <h3>Barandales</h3>
         <p>Elegantes barandales de hierro forjado.</p>
       </div>
       <div class="servicio">
-        <img src="puerta.jpg" alt="Estructuras metálicas">
+        <img src="porton.jpg" alt="Estructura metálica para techo o bodega">
         <h3>Estructuras</h3>
         <p>Fabricación e instalación de estructuras metálicas.</p>
       </div>
       <div class="servicio">
-        <img src="puerta.jpg" alt="Puertas metálicas">
+        <img src="puerta.jpg" alt="Puerta metálica de seguridad para exterior">
         <h3>Puertas</h3>
         <p>Fabricación de puertas metálicas resistentes y seguras para interior y exterior.</p>
       </div>
-      
       <div class="servicio">
-        <img src="proteccion.jpg" alt="Protecciones para ventanas">
+        <img src="proteccion.jpg" alt="Protección de herrería para ventana con diseño moderno">
         <h3>Protecciones</h3>
         <p>Instalación de protecciones de herrería para ventanas y puertas, seguras y estéticas.</p>
       </div>
-      
       <div class="servicio">
-        <img src="escalera.jpg" alt="Escaleras metálicas">
+        <img src="escalera.jpg" alt="Escalera metálica con barandal moderno">
         <h3>Escaleras</h3>
         <p>Diseño y construcción de escaleras metálicas para interiores y exteriores con acabados profesionales.</p>
       </div>
-      
     </div>
-  </div>
+  </main>
 
   <section class="contacto" id="contacto">
     <h2>Contáctanos</h2>
     <p><strong>Teléfono:</strong> 449 498 3841</p>
     <p><strong>Email:</strong> herreria.est.moreno@gmail.com</p>
-    <p><strong>Dirección:</strong> Altagracia Reyes A Paula de Jesus Jimenez Yáñez <br> &, Rodolfo Landeros, 20196 Aguascalientes, Ags.</p>
+    <p><strong>Dirección:</strong> Altagracia Reyes A Paula de Jesus Jimenez Yáñez, Rodolfo Landeros, 20196 Aguascalientes, Ags.</p>
+    <form action="mailto:herreria.est.moreno@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu email" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
     &copy; 2025 Herrería Moreno. Todos los derechos reservados.
   </footer>
 
+  <a href="https://wa.me/524494983841" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:10px 15px;border-radius:50%;font-size:24px;text-decoration:none;z-index:1000;">
+    💬
+  </a>
 </body>
 </html>
