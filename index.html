@@ -94,16 +94,28 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       transition: transform 0.2s, box-shadow 0.2s;
+      overflow: hidden;
     }
 
-    .servicio:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    }
-
-    .servicio img {
+    .slider {
+      position: relative;
       width: 100%;
+      height: 180px;
+      overflow: hidden;
       border-radius: 10px;
+    }
+
+    .slider img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
     }
 
     .servicio h3 {
@@ -180,32 +192,50 @@
     <h2>Servicios</h2>
     <div class="servicios">
       <div class="servicio">
-        <img src="porton.jpg" alt="Portón metálico personalizado">
+        <div class="slider">
+          <img src="porton.jpg" class="active" alt="Portón metálico 1">
+          <img src="barandal.jpg" alt="Portón metálico 2">
+        </div>
         <h3>Portones</h3>
         <p>Diseño y fabricación de portones metálicos personalizados.</p>
       </div>
       <div class="servicio">
-        <img src="barandal.jpg" alt="Barandal de hierro forjado negro con diseño clásico">
+        <div class="slider">
+          <img src="barandal.jpg" class="active" alt="Barandal 1">
+          <img src="proteccion.jpg" alt="Barandal 2">
+        </div>
         <h3>Barandales</h3>
         <p>Elegantes barandales de hierro forjado.</p>
       </div>
       <div class="servicio">
-        <img src="porton.jpg" alt="Estructura metálica para techo o bodega">
+        <div class="slider">
+           <img src="barandal.jpg" class="active" alt="Estructura 1">
+          <img src="proteccion.jpg" alt="Estructura 2">
+        </div>
         <h3>Estructuras</h3>
         <p>Fabricación e instalación de estructuras metálicas.</p>
       </div>
       <div class="servicio">
-        <img src="puerta.jpg" alt="Puerta metálica de seguridad para exterior">
+        <div class="slider">
+          <img src="puerta.jpg" class="active" alt="Puerta 1">
+          <img src="porton.jpg" alt="Puerta 2">
+        </div>
         <h3>Puertas</h3>
         <p>Fabricación de puertas metálicas resistentes y seguras para interior y exterior.</p>
       </div>
       <div class="servicio">
-        <img src="proteccion.jpg" alt="Protección de herrería para ventana con diseño moderno">
+        <div class="slider">
+          <img src="proteccion.jpg" class="active" alt="Protección 1">
+          <img src="escalera.jpg" alt="Protección 2">
+        </div>
         <h3>Protecciones</h3>
         <p>Instalación de protecciones de herrería para ventanas y puertas, seguras y estéticas.</p>
       </div>
       <div class="servicio">
-        <img src="escalera.jpg" alt="Escalera metálica con barandal moderno">
+        <div class="slider">
+          <img src="escalera.jpg" class="active" alt="Escalera 1">
+          <img src="porton.jpg" alt="Escalera 2">
+        </div>
         <h3>Escaleras</h3>
         <p>Diseño y construcción de escaleras metálicas para interiores y exteriores con acabados profesionales.</p>
       </div>
@@ -217,7 +247,7 @@
     <p><strong>Teléfono:</strong> 449 498 3841</p>
     <p><strong>Email:</strong> herreria.est.moreno@gmail.com</p>
     <p><strong>Dirección:</strong> Altagracia Reyes A Paula de Jesus Jimenez Yáñez, Rodolfo Landeros, 20196 Aguascalientes, Ags.</p>
-    <form action="mailto:herreria.est.moreno@gmail.com" method="post" enctype="text/plain">
+    <form action="procesar_formulario.php" method="post">
       <input type="text" name="nombre" placeholder="Tu nombre" required>
       <input type="email" name="correo" placeholder="Tu email" required>
       <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
@@ -232,5 +262,18 @@
   <a href="https://wa.me/524494983841" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:10px 15px;border-radius:50%;font-size:24px;text-decoration:none;z-index:1000;">
     💬
   </a>
+
+  <script>
+    // Secuencia automática de imágenes en tarjetas
+    document.querySelectorAll('.slider').forEach(slider => {
+      const images = slider.querySelectorAll('img');
+      let current = 0;
+      setInterval(() => {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+      }, 7000);
+    });
+  </script>
 </body>
 </html>
