@@ -247,12 +247,13 @@
     <p><strong>Teléfono:</strong> 449 498 3841</p>
     <p><strong>Email:</strong> herreria.est.moreno@gmail.com</p>
     <p><strong>Dirección:</strong> Altagracia Reyes A Paula de Jesus Jimenez Yáñez, Rodolfo Landeros, 20196 Aguascalientes, Ags.</p>
-    <form action="procesar_formulario.php" method="post">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="correo" placeholder="Tu email" required>
-      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <form action="mailto:herreria.est.moreno@gmail.com" method="post" enctype="text/plain">
+  <input type="text" placeholder="Tu nombre" required><br>
+  <input type="email" placeholder="Tu email" required><br>
+  <textarea placeholder="Tu mensaje" required></textarea><br>
+  <button type="submit">Enviar</button>
+</form>
+
   </section>
 
   <footer>
